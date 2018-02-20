@@ -10,8 +10,13 @@ class countriesList {
   }
   
   printCountries() {
-  	console.log(this.countries);
-    
+    // Sorting the population ascending/descending respectively
+    if (window.location.search.substr(1) === "pop=asc") {
+      this.countries = this.countries.sort(function (a, b){return a.population - b.population})
+    }
+    else if (window.location.search.substr(1) === "pop=desc") {
+      this.countries = this.countries.sort(function (a, b){return b.population - a.population})
+    } 
     for (var i = 0; i < this.countries.length; i++) {
       this.string.innerHTML += 
         `<tr>
