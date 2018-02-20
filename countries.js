@@ -10,7 +10,7 @@ class countriesList {
   }
   
   printCountries() {
-    // Sorting the population ascending/descending respectively
+    // Sorting the population ascending/descending respectively to the query string
     if (window.location.search.substr(1) === "pop=asc") {
       this.countries = this.countries.sort(function (a, b){return a.population - b.population})
     }
