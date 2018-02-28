@@ -6,6 +6,7 @@ class countriesList {
       xhttp.send();
       var response = JSON.parse(xhttp.responseText);
       this.countries = response;
+      console.log(this.countries)
       this.string = document.getElementById("tbody");
       this.searchEventListener();
   }
