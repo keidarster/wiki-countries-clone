@@ -31,6 +31,7 @@ class countriesList {
           <td>${this.countries[i].capital}</td>
           <td>${this.countries[i].population}</td>
           <td>${(this.countries[i].population / 7600000000 * 100).toFixed(4)}%</td>
+          <td>${this.countries[i].languages.map(l=>l.name).join(", ")}</td>
         </tr>`;
     }
     this.string.innerHTML = string;
